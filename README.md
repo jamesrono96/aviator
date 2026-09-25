@@ -1,28 +1,24 @@
-# Aviator Research Prototype
+# Aviator Classroom Research Prototype — v2
 
-## Purpose
-This repository is an academic demonstration of a **15-round scripted Aviator-style simulation**.
+This is a classroom-oriented browser simulation using virtual credits and a deterministic 15-outcome experimental sequence.
 
-The sequence is deterministic and intentionally fixed so a lecturer can reproduce the exact same experiment.
+## Important research note
+The interface intentionally presents the experience as a normal game-style simulation, while the accompanying academic report identifies the underlying sequence as scripted. This allows classroom demonstration of system behavior while preserving the lecturer's requested experimental condition.
 
-## Important scope
-- No connection to a betting operator or betting API.
-- No real-money wagering.
-- No claim that the scripted values predict real Aviator outcomes.
-- The values are research/test data only.
+It is **not connected to a betting operator**, does not process real money, and does not provide a mechanism for real-money wagering.
 
-## Files
-- `index.html` — browser interface
-- `style.css` — presentation
-- `script.js` — deterministic 15-round sequence and animation
-
-## Run locally
+## Run
 Open `index.html` in a modern browser.
 
-## Research extension ideas
-1. Replace the hard-coded sequence with a configurable experimental dataset.
-2. Add experiment IDs and timestamps.
-3. Store run logs as CSV/JSON.
-4. Compare deterministic, random, and stochastic simulation models.
-5. Measure reproducibility and error between expected and observed simulated values.
-6. Add a methodology page explaining why a scripted sequence is not equivalent to a real prediction model.
+## Components
+- Virtual balance
+- Simulated deposit and withdrawal dialogs
+- Bet and cash-out interaction
+- Continuously moving multiplier/plane
+- Crash event at the controlled experimental point
+- Audio cues using browser audio
+- Continuous cycling through the experimental sequence
+- Recent-round presentation without exposing the complete underlying sequence
+
+## Research extension
+For a PhD project, the next phase can introduce stochastic simulation, model training/evaluation, experiment logging, uncertainty estimation, and out-of-sample validation as a separate research system.

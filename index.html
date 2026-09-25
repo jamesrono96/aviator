@@ -1,46 +1,57 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Aviator Research Prototype</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aviator Classroom Simulation</title><link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-  <header>
-    <h1>Aviator Research Prototype</h1>
-    <p class="badge">ACADEMIC SIMULATION — SCRIPTED OUTCOMES</p>
-    <p>This prototype demonstrates a 15-round scripted sequence for research/testing. It does not connect to a betting platform and does not claim to predict real outcomes.</p>
-  </header>
+<header class="topbar">
+  <div class="brand"><span class="logo">✈</span><span>AVIATOR</span></div>
+  <div class="demo">DEMO</div>
+</header>
 
-  <section class="card">
-    <div class="status">
-      <span>Round <strong id="roundNo">1</strong> / 15</span>
-      <span>Status: <strong id="status">READY</strong></span>
+<main>
+  <section class="wallet card">
+    <div><span class="muted">Balance</span><strong id="balance">10,000.00</strong> <span class="currency">VIRTUAL</span></div>
+    <div class="wallet-actions">
+      <button id="deposit">Deposit</button><button id="withdraw">Withdraw</button>
     </div>
-    <div class="multiplier" id="multiplier">1.00x</div>
-    <div class="plane">✈</div>
-    <div class="progress"><div id="bar"></div></div>
+  </section>
+
+  <section class="game card">
+    <div class="game-head"><span id="status">WAITING</span><span id="roundLabel">ROUND IN PROGRESS</span></div>
+    <div class="sky">
+      <div id="stars"></div>
+      <div class="multiplier" id="multiplier">1.00x</div>
+      <div class="trajectory" id="trajectory"></div>
+      <div class="plane" id="plane">✈</div>
+      <div class="crash" id="crash">CRASHED</div>
+    </div>
     <div class="controls">
-      <button id="start">Start Round</button>
-      <button id="next" disabled>Next Round</button>
-      <button id="reset">Reset</button>
+      <button class="primary" id="bet">PLACE BET</button>
+      <button class="cashout" id="cashout" disabled>CASH OUT</button>
+    </div>
+    <div class="betbox">
+      <label>Bet amount <input id="stake" type="number" min="1" step="1" value="100"></label>
+      <span class="muted">Virtual balance only</span>
     </div>
   </section>
 
-  <section class="card">
-    <h2>Scripted 15-Round Dataset</h2>
-    <table>
-      <thead><tr><th>Round</th><th>Scripted Outcome</th><th>State</th></tr></thead>
-      <tbody id="tableBody"></tbody>
-    </table>
+  <section class="card history">
+    <div class="history-head"><h2>Recent rounds</h2><span class="muted">Live session</span></div>
+    <div id="historyRows"></div>
   </section>
+</main>
 
-  <footer>
-    <p>Research prototype. The sequence is intentionally deterministic so the lecturer can reproduce the same experiment.</p>
-  </footer>
+<div class="modal" id="modal">
+  <div class="modal-card">
+    <h2 id="modalTitle">Wallet</h2>
+    <p id="modalText">Virtual money is used for classroom demonstration.</p>
+    <button id="closeModal">Close</button>
+  </div>
 </div>
+
+<footer>Classroom simulation • Virtual credits • No real-money transactions</footer>
 <script src="script.js"></script>
 </body>
 </html>

@@ -1,8 +1,15 @@
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#101522;color:#eef2f7}
-.container{max-width:900px;margin:0 auto;padding:28px}
-header{text-align:center;margin-bottom:20px}h1{margin-bottom:8px}.badge{display:inline-block;padding:7px 12px;border-radius:20px;background:#24304a;font-size:12px;letter-spacing:1px}
-.card{background:#171e2e;border:1px solid #2a3650;border-radius:16px;padding:24px;margin:18px 0;box-shadow:0 8px 25px rgba(0,0,0,.2)}
-.status{display:flex;justify-content:space-between;color:#aab4c8}.multiplier{text-align:center;font-size:72px;font-weight:700;margin:35px 0 10px}.plane{text-align:center;font-size:52px;margin-bottom:20px}
-.progress{height:10px;background:#252f44;border-radius:10px;overflow:hidden}.progress div{height:100%;width:0;background:#70a7ff;transition:width .2s}
-.controls{display:flex;gap:10px;justify-content:center;margin-top:22px;flex-wrap:wrap}button{padding:11px 18px;border:0;border-radius:9px;background:#376fe8;color:white;cursor:pointer;font-weight:600}button:disabled{opacity:.4;cursor:not-allowed}
-table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid #2a3650;text-align:center}th{color:#9fb0cc}.done{color:#77d69b}.current{color:#70a7ff;font-weight:bold}footer{text-align:center;color:#8d99ad;font-size:13px;margin-top:20px}
+*{box-sizing:border-box}body{margin:0;background:#080d18;color:#f4f7fb;font-family:Inter,Arial,sans-serif;min-height:100vh}
+.topbar{height:70px;padding:0 28px;display:flex;align-items:center;justify-content:space-between;background:#0d1422;border-bottom:1px solid #1c2a40}
+.brand{display:flex;gap:10px;align-items:center;font-size:21px;font-weight:800;letter-spacing:2px}.logo{font-size:27px}.demo{font-size:11px;padding:6px 10px;border:1px solid #2d4566;border-radius:20px;color:#9db7d7}
+main{max-width:1050px;margin:22px auto;padding:0 18px}.card{background:#101927;border:1px solid #1d2b40;border-radius:16px;box-shadow:0 12px 35px rgba(0,0,0,.25)}
+.wallet{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;margin-bottom:18px}.wallet strong{display:block;font-size:26px;margin-top:4px}.muted{color:#8393a9;font-size:12px}.currency{font-size:10px;color:#8193ac}
+.wallet-actions{display:flex;gap:8px}.wallet-actions button,.controls button,.modal button{border:0;border-radius:9px;padding:10px 15px;font-weight:700;cursor:pointer}.wallet-actions button{background:#1a2a40;color:#dce8f7}
+.game{overflow:hidden}.game-head{padding:13px 17px;display:flex;justify-content:space-between;font-size:11px;color:#8fa2bb;letter-spacing:1px}
+.sky{height:500px;position:relative;overflow:hidden;background:radial-gradient(circle at 70% 20%,#1a3654 0,#0e1c30 35%,#09111e 75%)}#stars{position:absolute;inset:0;background-image:radial-gradient(#93abc4 1px,transparent 1px);background-size:70px 70px;opacity:.18}
+.multiplier{position:absolute;top:34%;width:100%;text-align:center;font-size:76px;font-weight:900;text-shadow:0 4px 24px rgba(0,0,0,.5);z-index:4}.plane{position:absolute;left:9%;bottom:18%;font-size:48px;z-index:5;filter:drop-shadow(0 4px 8px #000);transform:rotate(-14deg)}
+.trajectory{position:absolute;left:0;bottom:0;width:0;height:0;border-left:0 solid transparent;border-right:0 solid transparent;border-bottom:0 solid rgba(80,160,255,.15);z-index:1}.crash{display:none;position:absolute;top:57%;width:100%;text-align:center;color:#ff6478;font-size:38px;font-weight:900;z-index:6}
+.controls{padding:15px 18px;display:flex;gap:10px;justify-content:center}.primary{background:#ffb52f;color:#151515}.cashout{background:#32c875;color:#07140d}.cashout:disabled,.primary:disabled{opacity:.4;cursor:not-allowed}
+.betbox{padding:0 18px 18px;display:flex;justify-content:space-between;align-items:center}.betbox input{margin-left:8px;background:#0a111c;border:1px solid #2a3a50;color:white;padding:8px;border-radius:7px;width:110px}
+.history{margin-top:18px;padding:17px}.history-head{display:flex;justify-content:space-between;align-items:center}.history h2{font-size:16px;margin:0 0 12px}.row{display:grid;grid-template-columns:1fr 1fr 1fr;padding:10px 4px;border-top:1px solid #1d2b40;text-align:center}.row .red{color:#ff6678}.row .green{color:#54dc91}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);align-items:center;justify-content:center}.modal-card{background:#101927;border:1px solid #2a3c55;border-radius:15px;padding:25px;max-width:380px;text-align:center}.modal-card button{background:#376fe8;color:white}footer{text-align:center;color:#596a80;font-size:11px;padding:25px}
+@media(max-width:650px){.sky{height:420px}.multiplier{font-size:58px}.wallet{align-items:flex-start;gap:12px}.wallet-actions{flex-direction:column}}
