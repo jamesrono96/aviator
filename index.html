@@ -1,0 +1,11 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aviator Classroom</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div id="authScreen"><div class="authCard"><div class="logo">✈ AVIATOR</div><h1>Welcome</h1><p>Classroom research simulation</p><div class="tabs"><button id="loginTab">Login</button><button id="registerTab">Create account</button></div><div id="authForm"></div><small>Demo authentication only.</small></div></div>
+<div id="app" hidden><header><div class="logo">✈ AVIATOR</div><span id="userPhone"></span></header><main>
+<div class="wallet"><div><small>Balance</small><strong id="balance">10,000.00</strong></div><div><button id="deposit">Deposit</button><button id="withdraw">Withdraw</button></div></div>
+<div class="game"><div class="gameBar"><span id="state">NEXT ROUND</span><span id="roundClock">READY</span></div><div class="sky"><div class="stars"></div><div id="multiplier">1.00x</div><div id="trail"></div><div id="plane">✈</div><div id="crash">CRASHED</div></div></div>
+<div class="panel"><div class="head"><h2>Bet entries</h2><button id="addEntry">+ Add</button></div><div id="entries"></div><button class="place" id="placeBets">PLACE BETS</button><p>Maximum 5 entries. Bets prepared during a live round are queued for the next round.</p></div>
+<div class="panel"><h2>Recent results</h2><div id="history"></div></div>
+</main></div>
+<div id="modal" class="modal"><div class="modalBox"><h2 id="modalTitle"></h2><p id="modalText"></p><input id="modalAmount" type="number" min="1" placeholder="Amount"><button id="modalConfirm">Confirm</button><button id="modalCancel">Cancel</button></div></div>
+<script src="script.js"></script></body></html>
