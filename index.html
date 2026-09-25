@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aviator Research Prototype</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Aviator Research Prototype</h1>
+    <p class="badge">ACADEMIC SIMULATION — SCRIPTED OUTCOMES</p>
+    <p>This prototype demonstrates a 15-round scripted sequence for research/testing. It does not connect to a betting platform and does not claim to predict real outcomes.</p>
+  </header>
+
+  <section class="card">
+    <div class="status">
+      <span>Round <strong id="roundNo">1</strong> / 15</span>
+      <span>Status: <strong id="status">READY</strong></span>
+    </div>
+    <div class="multiplier" id="multiplier">1.00x</div>
+    <div class="plane">✈</div>
+    <div class="progress"><div id="bar"></div></div>
+    <div class="controls">
+      <button id="start">Start Round</button>
+      <button id="next" disabled>Next Round</button>
+      <button id="reset">Reset</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Scripted 15-Round Dataset</h2>
+    <table>
+      <thead><tr><th>Round</th><th>Scripted Outcome</th><th>State</th></tr></thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>Research prototype. The sequence is intentionally deterministic so the lecturer can reproduce the same experiment.</p>
+  </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

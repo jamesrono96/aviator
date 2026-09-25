@@ -1,0 +1,8 @@
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#101522;color:#eef2f7}
+.container{max-width:900px;margin:0 auto;padding:28px}
+header{text-align:center;margin-bottom:20px}h1{margin-bottom:8px}.badge{display:inline-block;padding:7px 12px;border-radius:20px;background:#24304a;font-size:12px;letter-spacing:1px}
+.card{background:#171e2e;border:1px solid #2a3650;border-radius:16px;padding:24px;margin:18px 0;box-shadow:0 8px 25px rgba(0,0,0,.2)}
+.status{display:flex;justify-content:space-between;color:#aab4c8}.multiplier{text-align:center;font-size:72px;font-weight:700;margin:35px 0 10px}.plane{text-align:center;font-size:52px;margin-bottom:20px}
+.progress{height:10px;background:#252f44;border-radius:10px;overflow:hidden}.progress div{height:100%;width:0;background:#70a7ff;transition:width .2s}
+.controls{display:flex;gap:10px;justify-content:center;margin-top:22px;flex-wrap:wrap}button{padding:11px 18px;border:0;border-radius:9px;background:#376fe8;color:white;cursor:pointer;font-weight:600}button:disabled{opacity:.4;cursor:not-allowed}
+table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid #2a3650;text-align:center}th{color:#9fb0cc}.done{color:#77d69b}.current{color:#70a7ff;font-weight:bold}footer{text-align:center;color:#8d99ad;font-size:13px;margin-top:20px}
